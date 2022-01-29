@@ -6,11 +6,11 @@ use zen;
 
 CREATE TABLE users(userid INTEGER AUTO_INCREMENT PRIMARY KEY,username VARCHAR(100),useremail VARCHAR(100),batchid INTEGER);
 
-INSERT INTO users(username,useremail,batchid) VALUES("Punit","punit@gmail.com",26),
-                                                    ("Sunil","sunil88@gmail.com",27),
-                                                    ("Amit","amiit99@gmail.com",27),
-                                                    ("Shamika","shamika@gmail.com",26),
-                                                    ("Arohi","arohi@gmail.com",26);
+INSERT INTO users(username,useremail,batchid) VALUES("Sangeetha","sangeetha@gmail.com",26),
+                                                    ("Maghilan","maghilan@gmail.com",27),
+                                                    ("Kishore","kishore@gmail.com",27),
+                                                    ("Ragavi","ragavi@gmail.com",26),
+                                                    ("Soni","soni@gmail.com",26);
 
 
 
@@ -25,21 +25,21 @@ INSERT INTO users(username,useremail,batchid) VALUES("Punit","punit@gmail.com",2
  CREATE TABLE company_drives(driveid INTEGER AUTO_INCREMENT PRIMARY KEY,userid INTEGER,
  drive_date DATE,company VARCHAR(100), FOREIGN KEY (userid) REFERENCES users(userid));
 
-INSERT INTO  company_drives(userid,drive_date,company) VALUES (3,"2020-1-11","Microsys"),
-                                                              (1,"2020-2-17","HCL"),
-                                                              (2,"2020-2-15","TCS"),
-                                                              (2,"2020-3-21","Zyam"),
-                                                              (5,"2020-3-30","M-phasis");
+INSERT INTO  company_drives(userid,drive_date,company) VALUES (3,"2020-10-8","Zoho"),
+                                                              (1,"2020-10-17","Cisco"),
+                                                              (2,"2020-10-28","Kyndryl"),
+                                                              (2,"2020-11-05","IBM"),
+                                                              (5,"2020-11-17","HCL");
 
 --  mentors
  CREATE TABLE mentors(mentorid INTEGER AUTO_INCREMENT PRIMARY KEY,mentorname VARCHAR(100),
  mentoremail VARCHAR(100));
 
- INSERT INTO mentors(mentorname,mentoremail) VALUES ("Ajit","ajit888@gmail.com"),
-                                                   ("Sudeep","sudeep007@gmail.com"),
-                                                   ("Amar","amar985@gmail.com"),
-                                                   ("Surya","surya7@gmail.com"),
-                                                   ("Akshay","akki111@gmail.com");
+ INSERT INTO mentors(mentorname,mentoremail) VALUES ("Preethi","preethi@gmail.com"),
+                                                   ("vijay","vijay@gmail.com"),
+                                                   ("Ashish","Ashish@gmail.com"),
+                                                   ("pranali","pranali@gmail.com"),
+                                                   ("Amir","amir@gmail.com");
 
  
 --  topic
@@ -47,11 +47,11 @@ INSERT INTO  company_drives(userid,drive_date,company) VALUES (3,"2020-1-11","Mi
  topic_date DATE,mentorid INTEGER,batchid INTEGER,
  FOREIGN KEY (mentorid) REFERENCES mentors(mentorid));
 
- INSERT INTO  topics(topic,topic_date,mentorid,batchid) VALUES("HTML Basics","2020-08-1",1,26),
-                                                               ("CSS Basics","2020-08-2",2,27),
-                                                               ("Bootstrap-Grid","2020-08-3",3,27),
-                                                               ("JavaScript","2020-08-5",4,26),
-                                                               ("React-component","2020-08-7",5,27);
+ INSERT INTO  topics(topic,topic_date,mentorid,batchid) VALUES("HTML Basics","2020-09-10",1,26),
+                                                               ("CSS Basics","2020-09-21",2,27),
+                                                               ("Bootstrap-Grid","2020-10-30",3,27),
+                                                               ("JavaScript","2020-11-05",4,26),
+                                                               ("React-component","2020-11-10",5,27);
 
  
 --  tasks
